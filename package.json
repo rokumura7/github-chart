@@ -1,0 +1,19 @@
+{
+  "name": "github-chart",
+  "version": "1.0.0",
+  "description": "Display monthly commit count trends as a chart.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rokumura7/github-chart.git"
+  },
+  "author": "rokumura7",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rokumura7/github-chart/issues"
+  },
+  "homepage": "https://github.com/rokumura7/github-chart#readme"
+}
