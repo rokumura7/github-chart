@@ -1,6 +1,8 @@
 import dotenv from 'dotenv'
 dotenv.config()
 
-export default {
+const conf = {
   token: process.env.TOKEN
 }
+
+export default conf
