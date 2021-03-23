@@ -1,6 +1,8 @@
+import { AxiosPromise, AxiosResponse } from 'axios'
 import req from './HttpClient'
+import { ActivitiesResponseData } from './types'
 
-export const fetchActivities = (username: string) => {
+export const fetchActivities = async (username: string) => {
   const variables = {
     username
   }
@@ -26,5 +28,5 @@ export const fetchActivities = (username: string) => {
     }
     `,
     variables,
-  })
+  }) as AxiosPromise<AxiosResponse<ActivitiesResponseData>>
 }
