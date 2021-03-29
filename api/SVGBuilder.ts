@@ -90,7 +90,7 @@ export default class SVGBuilder {
     const currentYear = new Date().getFullYear();
     const lastYear = currentYear - 1;
     return `
-      <svg width="650" height="350" viewBow="0,0,650,350">
+      <svg width="650" height="350" viewBow="0,0,650,350" xmlns="http://www.w3.org/2000/svg">
         <line x1="50" y1="15" x2="75" y2="15" stroke="#aca" />
         <text x="80" y="20" fill="#aca">${currentYear}：Avg. ${this.currentYearAvg}</text>
         <line x1="50" y1="35" x2="75" y2="35" stroke="#caa" />
