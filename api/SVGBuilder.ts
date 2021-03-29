@@ -43,9 +43,17 @@ export default class SVGBuilder {
       return ''
     })
     return `
-      <polyline class="history-polyline" stroke="${isCurrent ? '#ACA' : '#CAA'}"
-        ${isCurrent ? 'current' : ''}
+      <polyline stroke="${isCurrent ? '#ACA' : '#CAA'}"
         points="${points.join(' ')}"
+        style="
+          stroke-width: 2;
+          fill: none;
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 1000;
+          -webkit-animation: dash 3s linear forwards;
+          animation: dash 3s linear forwards;
+          ${isCurrent ? 'stroke-width: 4;' : ''}
+        "
       />
     `
   }
@@ -71,7 +79,7 @@ export default class SVGBuilder {
   }
 
   private buildAvgs = () => {
-    const avgElm = '<line x1="50" y1="_AVG" x2="600" y2="_AVG" opacity="0.5" stroke="_COLOR" />'
+    const avgElm = '<line x1="50" y1="_AVG" x2="600" y2="_AVG" opacity="0.5" stroke="_COLOR" style="stroke-width: 2;" />'
     const elms = []
     if (this.currentYearAvg > 0) elms.push(avgElm.replace(/_AVG/g, `${300 - this.currentYearAvg * this.diameter}`).replace('_COLOR', '#ACA'))
     if (this.lastYearAvg > 0) elms.push(avgElm.replace(/_AVG/g, `${300 - this.lastYearAvg * this.diameter}`).replace('_COLOR', '#CAA'))
@@ -88,14 +96,14 @@ export default class SVGBuilder {
     const currentYear = new Date().getFullYear();
     const lastYear = currentYear - 1;
     return `
-      <svg width="650" height="350" viewBow="0,0,650,350" xmlns="http://www.w3.org/2000/svg">
-        <line x1="50" y1="15" x2="75" y2="15" stroke="#aca" />
+      <svg width="650" height="350" viewBow="0,0,650,350" xmlns="http://www.w3.org/2000/svg" style="background-color: #333;">
+        <line x1="50" y1="15" x2="75" y2="15" stroke="#aca" style="stroke-width: 2;" />
         <text x="80" y="20" fill="#aca">${currentYear}：Avg. ${this.currentYearAvg}</text>
-        <line x1="50" y1="35" x2="75" y2="35" stroke="#caa" />
+        <line x1="50" y1="35" x2="75" y2="35" stroke="#caa" style="stroke-width: 2;" />
         <text x="80" y="40" fill="#caa">${lastYear}：Avg. ${this.lastYearAvg}</text>
 
-        <line x1="50" y1="50" x2="50" y2="300" stroke="#ccc" />
-        <line x1="50" y1="300" x2="600" y2="300" stroke="#ccc" />
+        <line x1="50" y1="50" x2="50" y2="300" stroke="#ccc" style="stroke-width: 2;" />
+        <line x1="50" y1="300" x2="600" y2="300" stroke="#ccc" style="stroke-width: 2;" />
 
         <g stroke="#777" opacity="0.1"  >
           <line x1="100" x2="100" y1="50" y2="300"/>
