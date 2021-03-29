@@ -48,10 +48,6 @@ export default class SVGBuilder {
         style="
           stroke-width: 2;
           fill: none;
-          stroke-dasharray: 1000;
-          stroke-dashoffset: 1000;
-          -webkit-animation: dash 3s linear forwards;
-          animation: dash 3s linear forwards;
           ${isCurrent ? 'stroke-width: 4;' : ''}
         "
       />
