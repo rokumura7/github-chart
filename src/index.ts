@@ -2,7 +2,7 @@ import { fetchActivities } from './GitHubApi'
 import SVGBuilder from './SVGBuilder'
 import { aggregateMonth } from './Utils'
 
-(async () => {
+export default async () => {
   const currentYear = new Date().getFullYear();
   const currentActivities = (await fetchActivities('rokumura7', currentYear)).data.data.user.contributionsCollection.contributionCalendar.weeks
   const lastYear = currentYear - 1;
@@ -13,4 +13,4 @@ import { aggregateMonth } from './Utils'
     .build()
   console.log(svg)
   return svg
-})()
+}
