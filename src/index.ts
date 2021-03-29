@@ -1,8 +1,10 @@
+import { VercelRequest, VercelResponse } from '@vercel/node'
 import { fetchActivities } from './GitHubApi'
 import SVGBuilder from './SVGBuilder'
 import { aggregateMonth } from './Utils'
 
-export default async () => {
+export default async (req: VercelRequest, res: VercelResponse) => {
+  console.log(req)
   const currentYear = new Date().getFullYear();
   const currentActivities = (await fetchActivities('rokumura7', currentYear)).data.data.user.contributionsCollection.contributionCalendar.weeks
   const lastYear = currentYear - 1;
@@ -12,5 +14,6 @@ export default async () => {
     .lastYearActivities(aggregateMonth(lastActivities))
     .build()
   console.log(svg)
-  return svg
+  res.setHeader("Content-Type", "image/svg+xml")
+  return res.status(200).send(svg)
 }
