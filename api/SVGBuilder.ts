@@ -31,8 +31,6 @@ export default class SVGBuilder {
 
   private setAvg = () => {
     const sum = (activities: ActivitiesDataPerMonth[]) => activities.reduce((total, act) => total + act.totalContributionCount, 0)
-    console.log(sum(this._currentYearActivities))
-    console.log(new Date().getMonth() + 1)
     this.currentYearAvg = Math.round(sum(this._currentYearActivities) / (new Date().getMonth() + 1))
     this.lastYearAvg = Math.round(sum(this._lastYearActivities) / 12)
   }
