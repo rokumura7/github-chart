@@ -57,7 +57,7 @@ export default class SVGBuilder {
   private buildCircles = () => {
     const circleElm = `
       <circle cx="_X" cy="_Y">
-        <animate attributeName="r" values="2;4;2" dur="1s" repeatCount="indefinite" />
+        <animate attributeName="r" values="2;5;2" dur="2s" repeatCount="indefinite" />
       </circle>
       `
     const circleElms = [...Array(12)].map((_, i) => i).map(i => {
