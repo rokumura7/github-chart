@@ -1,3 +1,16 @@
+[![ci](https://github.com/rokumura7/github-chart/actions/workflows/ci.yml/badge.svg)](https://github.com/rokumura7/github-chart/actions/workflows/ci.yml)
+[![Maintainability](https://api.codeclimate.com/v1/badges/264a8304f34582046f72/maintainability)](https://codeclimate.com/github/rokumura7/github-chart/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/264a8304f34582046f72/test_coverage)](https://codeclimate.com/github/rokumura7/github-chart/test_coverage)
+
+![dependencies](https://david-dm.org/rokumura7/github-chart.svg)
+![devDependencies](https://david-dm.org/rokumura7/github-chart/dev-status.svg)
+![GitHub last commit](https://img.shields.io/github/last-commit/rokumura7/github-chart)
+
+![GitHub](https://img.shields.io/github/license/rokumura7/github-chart)
+
+![GitHub forks](https://img.shields.io/github/forks/rokumura7/github-chart?style=social)
+![GitHub Repo stars](https://img.shields.io/github/stars/rokumura7/github-chart?style=social)
+
 # github-chart
 
 ```markdown
@@ -6,14 +19,14 @@
 
 ## for Developers
 
-## Contributing Guide
+### Contributing Guide
 
 1. Report a issue and discuss
 1. Fork the repo and create new branch from main
 1. Implement an enhancement on your local
 1. Issue that Pull Request to main
 
-## Setting Guide
+### Setting Guide
 
 Copy the dotenv file.
 ```bash
