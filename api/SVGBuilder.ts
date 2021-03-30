@@ -46,9 +46,8 @@ export default class SVGBuilder {
       <polyline stroke="${isCurrent ? '#ACA' : '#CAA'}"
         points="${points.join(' ')}"
         style="
-          stroke-width: 2;
           fill: none;
-          ${isCurrent ? 'stroke-width: 4;' : ''}
+          ${isCurrent ? 'stroke-width: 4;' : 'stroke-width: 2;'}
         "
       />
     `
