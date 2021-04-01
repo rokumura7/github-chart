@@ -126,7 +126,18 @@ export default class SVGBuilder {
 
         ${circles}
         <g fill="#ccc">
-          <text x="35" y="325" word-spacing="25">Jan. Feb. Mar. Apr. May. Jun. Jul. Aug. Sep. Oct. Nov. Dec.</text>
+          <text x="50" y="325">Jan.</text>
+          <text x="100" y="325">Feb.</text>
+          <text x="150" y="325">Mar.</text>
+          <text x="200" y="325">Apr.</text>
+          <text x="250" y="325">May.</text>
+          <text x="300" y="325">Jun.</text>
+          <text x="350" y="325">Jul.</text>
+          <text x="400" y="325">Aug.</text>
+          <text x="450" y="325">Sep.</text>
+          <text x="500" y="325">Oct.</text>
+          <text x="550" y="325">Nov.</text>
+          <text x="600" y="325">Dec.</text>
         </g>
       </svg>
     `
