@@ -91,7 +91,8 @@ export default class SVGBuilder {
     const currentYear = new Date().getFullYear();
     const lastYear = currentYear - 1;
     return `
-      <svg width="650" height="350" viewBow="0,0,650,350" xmlns="http://www.w3.org/2000/svg" style="background-color: #000500; border: 2px solid #ccc; border-radius: 3px; box-sizing: border-box">
+      <svg width="650" height="350" viewBow="0,0,650,350" xmlns="http://www.w3.org/2000/svg">
+        <rect data-testid="card-bg" x="0.5" y="0.5" rx="4.5" height="100%" stroke="#E4E2E2" width="100%" fill="#141321" stroke-opacity="1"/>
         <line x1="50" y1="15" x2="75" y2="15" stroke="#aca" style="stroke-width: 2;" />
         <text x="80" y="20" fill="#aca">${currentYear}：Avg. ${this.currentYearAvg}</text>
         <line x1="50" y1="35" x2="75" y2="35" stroke="#caa" style="stroke-width: 2;" />

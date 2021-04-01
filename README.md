@@ -11,6 +11,8 @@
 ![GitHub forks](https://img.shields.io/github/forks/rokumura7/github-chart?style=social)
 ![GitHub Repo stars](https://img.shields.io/github/stars/rokumura7/github-chart?style=social)
 
+[![github-chart](https://github-chart.vercel.app/api?user=rokumura7)](https://github.com/rokumura7/github-chart)
+
 # github-chart
 
 ```markdown
