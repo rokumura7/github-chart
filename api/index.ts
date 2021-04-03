@@ -1,7 +1,7 @@
 import { VercelRequest, VercelResponse } from '@vercel/node'
 import { fetchActivities } from './GitHubApi'
 import SVGBuilder from './SVGBuilder'
-import { aggregateMonth } from './Utils'
+import { aggregateMonth } from './Helper'
 
 export default async (req: VercelRequest, res: VercelResponse) => {
   const username = req.query["user"] as string
