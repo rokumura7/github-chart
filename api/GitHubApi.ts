@@ -2,12 +2,8 @@ import { ActivitiesResponseData } from './types'
 import req from './HttpClient'
 
 export const fetchActivities = async (username: string, year: number) => {
-  const variables = {
-    username
-  }
   const data = {
-    query: `
-    query userInfo($username: String!) {
+    query: `query userInfo($username: String!) {
       user(login: $username) {
         name
         login
@@ -23,9 +19,8 @@ export const fetchActivities = async (username: string, year: number) => {
           }
         }
       }
-    }
-    `,
-    variables,
+    }`,
+    variables: { username },
   }
   return req<ActivitiesResponseData>(data)
 }
