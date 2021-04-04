@@ -5,11 +5,8 @@ const headers = {
   Authorization: `bearer ${conf.token}`
 }
 
-const req = (data: {}) => axios({
-  url: 'https://api.github.com/graphql',
-  method: 'POST',
-  headers,
-  data
-})
+export const client = axios.create({ baseURL: 'https://api.github.com', timeout: 3000 })
+
+const req = <T>(data: {}) => client.post<T>('/graphql', data, { headers })
 
 export default req

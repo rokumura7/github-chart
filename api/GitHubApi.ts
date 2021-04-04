@@ -1,13 +1,11 @@
-import { AxiosPromise, AxiosResponse } from 'axios'
-import req from './HttpClient'
 import { ActivitiesResponseData } from './types'
+import req from './HttpClient'
 
 export const fetchActivities = async (username: string, year: number) => {
   const variables = {
     username
   }
-  return req(
-  {
+  const data = {
     query: `
     query userInfo($username: String!) {
       user(login: $username) {
@@ -28,5 +26,6 @@ export const fetchActivities = async (username: string, year: number) => {
     }
     `,
     variables,
-  }) as AxiosPromise<AxiosResponse<ActivitiesResponseData>>
+  }
+  return req<ActivitiesResponseData>(data)
 }

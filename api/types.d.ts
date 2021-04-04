@@ -13,13 +13,15 @@ export type ActivitiesDataPerMonth = {
 }
 
 export type ActivitiesResponseData = {
-  user: {
-    name: string
-    login: string
-    contributionsCollection: {
-      contributionCalendar: {
-        totalContributions: number
-        weeks: ActivitiesDataPerWeek[]
+  data: {
+    user: {
+      name: string
+      login: string
+      contributionsCollection: {
+        contributionCalendar: {
+          totalContributions: number
+          weeks: ActivitiesDataPerWeek[]
+        }
       }
     }
   }

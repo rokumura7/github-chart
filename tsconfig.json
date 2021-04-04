@@ -10,6 +10,7 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "api/**/*"
+    "api",
+    "test"
   ],
 }
