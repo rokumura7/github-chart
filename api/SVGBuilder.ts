@@ -75,9 +75,10 @@ export default class SVGBuilder {
 
   private buildAvgs = () => {
     const avgElm = '<line x1="50" y1="_AVG" x2="600" y2="_AVG" opacity="0.5" stroke="_COLOR" style="stroke-width: 2;" />'
+    const buildElm = (avg: number, color: string) => avgElm.replace(/_AVG/g, `${300 - avg * this.diameter}`).replace('_COLOR', color)
     const elms = []
-    if (this.currentYearAvg > 0) elms.push(avgElm.replace(/_AVG/g, `${300 - this.currentYearAvg * this.diameter}`).replace('_COLOR', '#ACA'))
-    if (this.lastYearAvg > 0) elms.push(avgElm.replace(/_AVG/g, `${300 - this.lastYearAvg * this.diameter}`).replace('_COLOR', '#CAA'))
+    if (this.currentYearAvg > 0) elms.push(buildElm(this.currentYearAvg, '#ACA'))
+    if (this.lastYearAvg > 0) elms.push(buildElm(this.lastYearAvg, '#CAA'))
     return elms.join('')
   }
 
