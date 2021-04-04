@@ -7,6 +7,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
   const username = req.query["user"] as string
   const currentYear = new Date().getFullYear()
   const currentActivities = (await fetchActivities(username, currentYear)).data.data.user.contributionsCollection.contributionCalendar.weeks
+  console.log(currentActivities[0])
   const lastYear = currentYear - 1
   const lastActivities = (await fetchActivities(username, lastYear)).data.data.user.contributionsCollection.contributionCalendar.weeks
   const svg = SVGBuilder.prepare()

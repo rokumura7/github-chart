@@ -1,10 +1,10 @@
+export type ActivitiesDataPerDay = {
+  contributionCount: number
+  date: string
+}
+
 export type ActivitiesDataPerWeek = {
-  contributionDays: [
-    {
-      contributionCount: number
-      date: string
-    }
-  ]
+  contributionDays: ActivitiesDataPerDay[]
 }
 
 export type ActivitiesDataPerMonth = {
