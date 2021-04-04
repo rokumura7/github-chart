@@ -1,4 +1,3 @@
-import { ActivitiesDataPerWeek } from '../api/types'
 import { aggregateMonth } from '../api/Helper'
 
 describe('Helper.aggregateMonth', () => {
