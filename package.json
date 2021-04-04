@@ -7,7 +7,8 @@
     "build": "tsc",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "cov": "jest --coverage"
+    "cov": "jest --coverage",
+    "cov:watch": "jest --coverage --watchAll"
   },
   "repository": {
     "type": "git",
