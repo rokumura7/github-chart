@@ -1,5 +1,12 @@
+import axios from 'axios'
+import conf from './MyConfig'
 import { ActivitiesResponseData } from './types'
-import req from './HttpClient'
+
+const headers = {
+  Authorization: `bearer ${conf.token}`
+}
+
+export const client = axios.create({ baseURL: 'https://api.github.com', timeout: 3000 })
 
 export const fetchActivities = async (username: string, year: number) => {
   const data = {
@@ -20,5 +27,5 @@ export const fetchActivities = async (username: string, year: number) => {
     }`,
     variables: { username },
   }
-  return req<ActivitiesResponseData>(data)
+  return client.post<ActivitiesResponseData>('/graphql', data, { headers })
 }

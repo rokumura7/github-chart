@@ -1,9 +1,11 @@
-import { fetchActivities } from '../api/GitHubApi'
+import MockAdapter from "axios-mock-adapter";
+import { fetchActivities, client } from '../api/GitHubApi'
 
-jest.mock('../api/HttpClient', () => jest.fn(() => {}))
+const mockAxios = new MockAdapter(client)
 
 describe('GitHubApi.fetchActivities', () => {
   it('should return activities', async () => {
+    mockAxios.onPost('/graphql').reply(200)
     const actual = await fetchActivities('github-chart-test', 2021)
     expect(actual).not.toBeNull()
   })
