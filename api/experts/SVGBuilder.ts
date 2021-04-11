@@ -24,14 +24,13 @@ export default class SVGBuilder implements Expert<ResultBySVGBuilder> {
       diameter: props.specification.diameter,
       isThisYear: false,
     })
-    const polylines = [thisYearPolyline.svg, lastYearPolyline.svg].join('')
     const ciclePoints = new CirclePointsSVGBuilder().work({
       activities: props.specification.thisYearActivities,
       diameter: props.specification.diameter
     })
     const svg = outline.svg
       .replace(/__AVERAGE__/g, averageLines.svg)
-      .replace(/__POLYLINE__/g, polylines)
+      .replace(/__POLYLINE__/g, [thisYearPolyline.svg, lastYearPolyline.svg].join(''))
       .replace(/__CIRCLE__/g, ciclePoints.svg)
     return { svg }
   }
