@@ -27,18 +27,14 @@ ${this.makeLines(props)}`
 </g>`
   }
 
-  private makeLines = (props: Props) => {
-    const lineElm = '<line class="_CLASS avg-line" x1="50" y1="_AVG" x2="600" y2="_AVG" />'
-    const thisYearLine = lineElm
-      .replace(/_CLASS/g, 'this_year')
-      .replace(/_AVG/g, `${300 - props.thisYearAvg * props.diameter}`)
-    const lastYearLine = lineElm
-      .replace(/_CLASS/g, 'last_year')
-      .replace(/_AVG/g, `${300 - props.lastYearAvg * props.diameter}`)
-    return `
+  private makeLines = (props: Props) => `
 <g class="avg-lines">
-  ${thisYearLine}
-  ${lastYearLine}
+  ${ this.makeLine(props.thisYearAvg, props.diameter, true) }
+  ${ this.makeLine(props.lastYearAvg, props.diameter, false) }
 </g>`
-  }
+
+  private makeLine = (avg: number, diameter: number, isThisYear: boolean) =>
+    '<line class="_CLASS avg-line" x1="50" y1="_AVG" x2="600" y2="_AVG" />'
+      .replace(/_CLASS/g, isThisYear ? 'this_year' : 'last_year')
+      .replace(/_AVG/g, `${300 - avg * diameter}`)
 }
