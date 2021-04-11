@@ -1,5 +1,5 @@
 import { AverageLineSVGBuilder, CirclePointsSVGBuilder, OutlineSVGBuilder, PolylineSVGBuilder } from "./index";
-import { ResultByAnalyst, ResultBySVGBuilder } from "../types";
+import { ResultByAnalyst, ResultBySVGBuilder } from "../../types";
 import Expert from "./Expert";
 
 interface Props {

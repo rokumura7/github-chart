@@ -5,7 +5,7 @@ import {
   ActivitiesDataPerWeek,
   ActivitiesDataPerMonth,
   ResultByAnalyst
-} from "../types";
+} from "../../types";
 
 type Activities4Analyst = {
   activities: ActivitiesDataPerMonth[]

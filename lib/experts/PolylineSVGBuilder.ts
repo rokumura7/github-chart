@@ -1,5 +1,5 @@
 import Expert from "./Expert";
-import { ResultBySVGBuilder, ActivitiesDataPerMonth } from "../types";
+import { ResultBySVGBuilder, ActivitiesDataPerMonth } from "../../types";
 
 interface Props {
   activities: ActivitiesDataPerMonth[]

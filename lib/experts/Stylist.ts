@@ -1,4 +1,4 @@
-import { ResultByStylist } from "../types";
+import { ResultByStylist } from "../../types";
 import Expert from "./Expert";
 
 interface Props {

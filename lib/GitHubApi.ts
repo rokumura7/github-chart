@@ -1,6 +1,6 @@
 import axios from 'axios'
 import conf from './MyConfig'
-import { ActivitiesResponseData } from './types'
+import { ActivitiesResponseData } from '../types'
 
 const headers = {
   Authorization: `bearer ${conf.token}`

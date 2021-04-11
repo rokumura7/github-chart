@@ -1,4 +1,4 @@
-import { Stylist } from '../../api/experts'
+import { Stylist } from '../../../lib/experts'
 
 describe('Stylist.work', () => {
   it('should return styles', () => {

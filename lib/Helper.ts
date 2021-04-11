@@ -1,4 +1,4 @@
-import { ActivitiesDataPerMonth, ActivitiesDataPerWeek } from "./types";
+import { ActivitiesDataPerMonth, ActivitiesDataPerWeek } from "../types";
 
 const aggregateMonth = (weeks: ActivitiesDataPerWeek[]): ActivitiesDataPerMonth[] => {
   return [...Array(12)].map((_, i) => i).map(i => {

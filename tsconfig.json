@@ -11,6 +11,8 @@
   },
   "include": [
     "api",
-    "test"
+    "lib",
+    "test",
+    "types.d.ts",
   ],
 }

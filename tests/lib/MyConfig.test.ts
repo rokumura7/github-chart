@@ -1,4 +1,4 @@
-import conf from '../api/MyConfig'
+import conf from '../../lib/MyConfig'
 
 describe('MyConfig', () => {
   it('can get values', () => {

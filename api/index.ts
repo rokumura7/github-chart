@@ -3,7 +3,7 @@ import {
   GitHubAnalyst,
   SVGBuilder,
   Stylist
-} from './experts/'
+} from '../lib/experts/'
 
 export default async (req: VercelRequest, res: VercelResponse) => {
   const username = req.query["user"] as string

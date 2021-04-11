@@ -1,5 +1,5 @@
 import Expert from "./Expert";
-import { ResultBySVGBuilder } from "../types";
+import { ResultBySVGBuilder } from "../../types";
 
 interface Props {
   thisYearAvg: number

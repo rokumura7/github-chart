@@ -1,4 +1,4 @@
-import { SVGBuilder } from '../../api/experts'
+import { SVGBuilder } from '../../../lib/experts'
 
 describe('SVGBuilder.work', () => {
   it('should return svg', () => {
