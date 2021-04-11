@@ -23,8 +23,24 @@ export default class Stylist implements Expert<ResultByStylist> {
   }
 
   private makeFundamental = () => `
-  line { stroke-width: 2; }
-  polyline { fill: none; stroke-width: 2; }
+  line, polyline {
+    fill: none;
+    stroke-width: 2;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    -webkit-animation: dash 4s linear forwards;
+    animation: dash 4s linear forwards;
+  }
+  @-webkit-keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
   polyline.this_year { stroke-width: 4; }
   `
 }
