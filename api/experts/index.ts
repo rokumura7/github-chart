@@ -12,5 +12,6 @@ export {
   CirclePointsSVGBuilder,
   OutlineSVGBuilder,
   PolylineSVGBuilder,
-  GitHubAnalyst
+  GitHubAnalyst,
+  Stylist
 }
