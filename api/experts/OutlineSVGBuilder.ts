@@ -11,6 +11,16 @@ export default class OutlineSVGBuilder implements Expert<ResultBySVGBuilder> {
     <line x1="50" y1="50" x2="50" y2="300" />
     <line x1="50" y1="300" x2="600" y2="300" />
   </g>
+  ${ this.makeRuledLines() }
+  ${ this.makeMonths() }
+  __AVERAGE__
+  __POLYLINE__
+  __CIRCLE__
+</svg>`
+    return { svg }
+  }
+
+  private makeRuledLines = () => `
   <g class="ruled-line">
     <line x1="100" x2="100" y1="50" y2="300"/>
     <line x1="150" x2="150" y1="50" y2="300"/>
@@ -28,7 +38,9 @@ export default class OutlineSVGBuilder implements Expert<ResultBySVGBuilder> {
     <line x1="50" x2="600" y1="150" y2="150"/>
     <line x1="50" x2="600" y1="200" y2="200"/>
     <line x1="50" x2="600" y1="250" y2="250"/>
-  </g>
+  </g>`
+
+  private makeMonths = () => `
   <g class="months">
     <text x="50" y="325">Jan.</text>
     <text x="100" y="325">Feb.</text>
@@ -42,11 +54,5 @@ export default class OutlineSVGBuilder implements Expert<ResultBySVGBuilder> {
     <text x="500" y="325">Oct.</text>
     <text x="550" y="325">Nov.</text>
     <text x="600" y="325">Dec.</text>
-  </g>
-  __AVERAGE__
-  __POLYLINE__
-  __CIRCLE__
-</svg>`
-    return { svg }
-  }
+  </g>`
 }
