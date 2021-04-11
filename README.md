@@ -13,22 +13,24 @@
 
 [![github-chart](https://github-chart.vercel.app/api?user=rokumura7)](https://github.com/rokumura7/github-chart)
 
-# github-chart
+# github-chart 📈
+
+github-chart will chart your monthly commit count :octocat:
 
 ```markdown
 [![github-chart](https://github-chart.vercel.app/api?user=rokumura7)](https://github.com/rokumura7/github-chart)
 ```
 
-## for Developers
+## for Developers 👾
 
-### Contributing Guide
+### Contributing Guide :heart_eyes:
 
 1. Report a issue and discuss
 1. Fork the repo and create new branch from main
 1. Implement an enhancement on your local
 1. Issue that Pull Request to main
 
-### Setting Guide
+### Setting Guide :bulb:
 
 Copy the dotenv file.
 ```bash
