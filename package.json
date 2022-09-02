@@ -22,7 +22,7 @@
   "homepage": "https://github.com/rokumura7/github-chart#readme",
   "devDependencies": {
     "@types/jest": "^28.1.8",
-    "@types/node": "^18.7.13",
+    "@types/node": "^18.7.14",
     "@vercel/node": "^2.5.9",
     "axios-mock-adapter": "^1.21.2",
     "jest": "^28.1.3",
