@@ -2,13 +2,13 @@ import axios from 'axios';
 import conf from './my-config';
 import { ActivitiesResponseData } from '../types';
 
-const headers = {
-  Authorization: `bearer ${conf.token}`,
-};
-
 export const client = axios.create({ baseURL: 'https://api.github.com', timeout: 3000 });
 
 export const fetchActivities = async (username: string, year: number) => {
+  const token = conf.token ?? '';
+  const headers = {
+    Authorization: `bearer ${token}`,
+  };
   const data = {
     query: `query userInfo($username: String!) {
       user(login: $username) {
