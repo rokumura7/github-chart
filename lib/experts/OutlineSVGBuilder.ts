@@ -1,5 +1,5 @@
-import Expert from "./Expert";
-import { ResultBySVGBuilder } from "../../types";
+import Expert from './Expert';
+import { ResultBySVGBuilder } from '../../types';
 
 export default class OutlineSVGBuilder implements Expert<ResultBySVGBuilder> {
   work(): ResultBySVGBuilder {
@@ -11,13 +11,13 @@ export default class OutlineSVGBuilder implements Expert<ResultBySVGBuilder> {
     <line x1="50" y1="50" x2="50" y2="300" />
     <line x1="50" y1="300" x2="600" y2="300" />
   </g>
-  ${ this.makeRuledLines() }
-  ${ this.makeMonths() }
+  ${this.makeRuledLines()}
+  ${this.makeMonths()}
   __AVERAGE__
   __POLYLINE__
   __CIRCLE__
-</svg>`
-    return { svg }
+</svg>`;
+    return { svg };
   }
 
   private makeRuledLines = () => `
@@ -38,7 +38,7 @@ export default class OutlineSVGBuilder implements Expert<ResultBySVGBuilder> {
     <line x1="50" x2="600" y1="150" y2="150"/>
     <line x1="50" x2="600" y1="200" y2="200"/>
     <line x1="50" x2="600" y1="250" y2="250"/>
-  </g>`
+  </g>`;
 
   private makeMonths = () => `
   <g class="months">
@@ -54,5 +54,5 @@ export default class OutlineSVGBuilder implements Expert<ResultBySVGBuilder> {
     <text x="500" y="325">Oct.</text>
     <text x="550" y="325">Nov.</text>
     <text x="600" y="325">Dec.</text>
-  </g>`
+  </g>`;
 }

@@ -1,15 +1,15 @@
-import { ResultByStylist } from "../../types";
-import Expert from "./Expert";
+import { ResultByStylist } from '../../types';
+import Expert from './Expert';
 
 interface Props {
-  theme: string
+  theme: string;
 }
 
 export default class Stylist implements Expert<ResultByStylist> {
   work(props?: Props): ResultByStylist {
     const style = `
 <style>
-  ${ this.makeFundamental() }
+  ${this.makeFundamental()}
   .this_year { stroke: #ACA; }
   .last_year { stroke: #CAA; }
   .card { fill: #141321; stroke: #E4E2E2; stroke-opacity: 1; }
@@ -18,8 +18,8 @@ export default class Stylist implements Expert<ResultByStylist> {
   .ruled-line { stroke: #777; opacity: 0.1; }
   .months { fill: #CCC; }
   .circle-points { fill: #CFC; }
-</style>`
-    return { style }
+</style>`;
+    return { style };
   }
 
   private makeFundamental = () => `
@@ -42,5 +42,5 @@ export default class Stylist implements Expert<ResultByStylist> {
     }
   }
   polyline.this_year { stroke-width: 4; }
-  `
+  `;
 }

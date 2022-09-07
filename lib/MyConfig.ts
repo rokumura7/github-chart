@@ -1,8 +1,8 @@
-import dotenv from 'dotenv'
-dotenv.config()
+import dotenv from 'dotenv';
+dotenv.config();
 
 const conf = {
-  token: process.env.TOKEN
-}
+  token: process.env.TOKEN,
+};
 
-export default conf
+export default conf;
