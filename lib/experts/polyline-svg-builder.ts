@@ -4,7 +4,7 @@ import { ResultBySVGBuilder, ActivitiesDataPerMonth } from '../../types';
 interface Props {
   activities: ActivitiesDataPerMonth[];
   diameter: number;
-  isThisYear: boolean;
+  isThisYear?: boolean;
 }
 
 export default class PolylineSVGBuilder implements Expert<ResultBySVGBuilder> {

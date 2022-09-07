@@ -8,26 +8,16 @@ interface Props {
 
 export default class SVGBuilder implements Expert<ResultBySVGBuilder> {
   work(props: Props): ResultBySVGBuilder {
+    const thisYearAvg = props.specification.thisYearAverage;
+    const lastYearAvg = props.specification.lastYearAverage;
+    const diameter = props.specification.diameter;
+    const activities = props.specification.thisYearActivities;
+
     const outline = new OutlineSVGBuilder().work();
-    const averageLines = new AverageLineSVGBuilder().work({
-      thisYearAvg: props.specification.thisYearAverage,
-      lastYearAvg: props.specification.lastYearAverage,
-      diameter: props.specification.diameter,
-    });
-    const thisYearPolyline = new PolylineSVGBuilder().work({
-      activities: props.specification.thisYearActivities,
-      diameter: props.specification.diameter,
-      isThisYear: true,
-    });
-    const lastYearPolyline = new PolylineSVGBuilder().work({
-      activities: props.specification.lastYearActivities,
-      diameter: props.specification.diameter,
-      isThisYear: false,
-    });
-    const ciclePoints = new CirclePointsSVGBuilder().work({
-      activities: props.specification.thisYearActivities,
-      diameter: props.specification.diameter,
-    });
+    const averageLines = new AverageLineSVGBuilder().work({ thisYearAvg, lastYearAvg, diameter });
+    const thisYearPolyline = new PolylineSVGBuilder().work({ activities, diameter, isThisYear: true });
+    const lastYearPolyline = new PolylineSVGBuilder().work({ activities, diameter });
+    const ciclePoints = new CirclePointsSVGBuilder().work({ activities, diameter });
     const svg = outline.svg
       .replace(/__AVERAGE__/g, averageLines.svg)
       .replace(/__POLYLINE__/g, [thisYearPolyline.svg, lastYearPolyline.svg].join(''))
