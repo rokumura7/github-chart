@@ -1,4 +1,4 @@
-import Expert from './Expert';
+import Expert from './expert';
 import { ResultBySVGBuilder, ActivitiesDataPerMonth } from '../../types';
 
 interface Props {

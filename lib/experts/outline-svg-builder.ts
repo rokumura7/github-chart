@@ -1,4 +1,4 @@
-import Expert from './Expert';
+import Expert from './expert';
 import { ResultBySVGBuilder } from '../../types';
 
 export default class OutlineSVGBuilder implements Expert<ResultBySVGBuilder> {

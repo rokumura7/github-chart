@@ -1,4 +1,4 @@
-import { aggregateMonth } from '../../lib/Helper';
+import { aggregateMonth } from '../../lib/helper';
 
 describe('Helper.aggregateMonth', () => {
   it('should return activities data per month', () => {

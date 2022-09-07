@@ -1,12 +1,8 @@
 import { ResultByStylist } from '../../types';
-import Expert from './Expert';
-
-interface Props {
-  theme: string;
-}
+import Expert from './expert';
 
 export default class Stylist implements Expert<ResultByStylist> {
-  work(props?: Props): ResultByStylist {
+  work(): ResultByStylist {
     const style = `
 <style>
   ${this.makeFundamental()}

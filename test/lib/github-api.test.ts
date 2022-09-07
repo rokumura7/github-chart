@@ -1,5 +1,5 @@
 import MockAdapter from 'axios-mock-adapter';
-import { fetchActivities, client } from '../../lib/GitHubApi';
+import { fetchActivities, client } from '../../lib/github-api';
 
 const mockAxios = new MockAdapter(client);
 

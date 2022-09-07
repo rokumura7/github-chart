@@ -1,6 +1,6 @@
-import Expert from './Expert';
-import { fetchActivities } from '../GitHubApi';
-import { aggregateMonth } from '../Helper';
+import Expert from './expert';
+import { fetchActivities } from '../github-api';
+import { aggregateMonth } from '../helper';
 import { ActivitiesDataPerWeek, ActivitiesDataPerMonth, ResultByAnalyst } from '../../types';
 
 type Activities4Analyst = {

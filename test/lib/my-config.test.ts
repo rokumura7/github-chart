@@ -1,4 +1,4 @@
-import conf from '../../lib/MyConfig';
+import conf from '../../lib/my-config';
 
 describe('MyConfig', () => {
   it('can get values', () => {
