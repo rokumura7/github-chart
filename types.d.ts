@@ -1,42 +1,42 @@
 export type ActivitiesDataPerDay = {
-  contributionCount: number
-  date: string
-}
+  contributionCount: number;
+  date: string;
+};
 
 export type ActivitiesDataPerWeek = {
-  contributionDays: ActivitiesDataPerDay[]
-}
+  contributionDays: ActivitiesDataPerDay[];
+};
 
 export type ActivitiesDataPerMonth = {
-  month: number
-  totalContributionCount: number
-}
+  month: number;
+  totalContributionCount: number;
+};
 
 export type ActivitiesResponseData = {
   data: {
     user: {
       contributionsCollection: {
         contributionCalendar: {
-          totalContributions: number
-          weeks: ActivitiesDataPerWeek[]
-        }
-      }
-    }
-  }
-}
+          totalContributions: number;
+          weeks: ActivitiesDataPerWeek[];
+        };
+      };
+    };
+  };
+};
 
 export type ResultByAnalyst = {
-  thisYearActivities: ActivitiesDataPerMonth[]
-  lastYearActivities: ActivitiesDataPerMonth[]
-  thisYearAverage: number
-  lastYearAverage: number
-  diameter: number
-}
+  thisYearActivities: ActivitiesDataPerMonth[];
+  lastYearActivities: ActivitiesDataPerMonth[];
+  thisYearAverage: number;
+  lastYearAverage: number;
+  diameter: number;
+};
 
 export type ResultBySVGBuilder = {
-  svg: string
-}
+  svg: string;
+};
 
 export type ResultByStylist = {
-  style: string
-}
+  style: string;
+};

@@ -1,17 +1,19 @@
-import { ActivitiesDataPerMonth, ActivitiesDataPerWeek } from "../types";
+import { ActivitiesDataPerMonth, ActivitiesDataPerWeek } from '../types';
 
 const aggregateMonth = (weeks: ActivitiesDataPerWeek[]): ActivitiesDataPerMonth[] => {
-  return [...Array(12)].map((_, i) => i).map(i => {
+  return [...Array(12).keys()].map((i) => {
     const totalContributionCount = weeks
-      .map(w => w.contributionDays
-        .filter(d => new Date(d.date).getMonth() === i)
-        .reduce((sum, d) => sum + d.contributionCount, 0))
-      .reduce((sum, commits) => sum + commits)
+      .map((w) =>
+        w.contributionDays
+          .filter((d) => new Date(d.date).getMonth() === i)
+          .reduce((sum, d) => sum + d.contributionCount, 0),
+      )
+      .reduce((sum, commits) => sum + commits);
     return {
       month: i,
       totalContributionCount,
-    }
-  })
-}
+    };
+  });
+};
 
-export { aggregateMonth }
+export { aggregateMonth };
