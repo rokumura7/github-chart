@@ -9,7 +9,7 @@
     "test:watch": "jest --watchAll",
     "cov": "jest --coverage",
     "cov:watch": "jest --coverage --watchAll",
-    "eslint": "eslint api/**/*.ts lib/**/*.ts tests/**/*.test.ts"
+    "eslint": "eslint api/**/*.ts lib/**/*.ts test/**/*.test.ts"
   },
   "repository": {
     "type": "git",

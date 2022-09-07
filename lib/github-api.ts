@@ -1,5 +1,5 @@
 import axios from 'axios';
-import conf from './MyConfig';
+import conf from './my-config';
 import { ActivitiesResponseData } from '../types';
 
 const headers = {

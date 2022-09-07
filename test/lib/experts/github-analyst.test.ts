@@ -1,6 +1,6 @@
 import { GitHubAnalyst } from '../../../lib/experts';
 
-jest.mock('../../../lib/GitHubApi', () => {
+jest.mock('../../../lib/github-api', () => {
   return {
     fetchActivities: jest.fn(() => ({
       data: {
