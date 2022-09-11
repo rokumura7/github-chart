@@ -12,11 +12,11 @@ export default class SVGBuilder implements Expert<ResultBySVGBuilder> {
     const lastYearAvg = props.specification.lastYearAverage;
     const diameter = props.specification.diameter;
     const activities = props.specification.thisYearActivities;
-
+    const lastYearActivities = props.specification.lastYearActivities;
     const outline = new OutlineSVGBuilder().work();
     const averageLines = new AverageLineSVGBuilder().work({ thisYearAvg, lastYearAvg, diameter });
     const thisYearPolyline = new PolylineSVGBuilder().work({ activities, diameter, isThisYear: true });
-    const lastYearPolyline = new PolylineSVGBuilder().work({ activities, diameter });
+    const lastYearPolyline = new PolylineSVGBuilder().work({ activities: lastYearActivities, diameter });
     const ciclePoints = new CirclePointsSVGBuilder().work({ activities, diameter });
     const svg = outline.svg
       .replace(/__AVERAGE__/g, averageLines.svg)
