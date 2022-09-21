@@ -11,10 +11,10 @@ jest.mock('../../../lib/github-api', () => {
                 totalContributions: 100,
                 weeks: [
                   {
-                    contributionDays: [{ contributionCount: 1, date: '2020-01-01' }],
+                    contributionDays: [{ contributionCount: 1, date: '2021-01-01' }],
                   },
                   {
-                    contributionDays: [{ contributionCount: 2, date: '2021-01-01' }],
+                    contributionDays: [{ contributionCount: 2, date: '2022-01-01' }],
                   },
                 ],
               },
