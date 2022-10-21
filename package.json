@@ -27,7 +27,7 @@
   "homepage": "https://github.com/rokumura7/github-chart#readme",
   "devDependencies": {
     "@types/jest": "^29.1.1",
-    "@types/node": "^18.8.0",
+    "@types/node": "^18.11.3",
     "@typescript-eslint/eslint-plugin": "^5.38.1",
     "@typescript-eslint/parser": "^5.38.1",
     "@vercel/node": "^2.5.21",
