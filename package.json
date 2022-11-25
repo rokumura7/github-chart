@@ -29,7 +29,7 @@
     "@types/jest": "^29.1.1",
     "@types/node": "^18.8.0",
     "@typescript-eslint/eslint-plugin": "^5.38.1",
-    "@typescript-eslint/parser": "^5.38.1",
+    "@typescript-eslint/parser": "^5.44.0",
     "@vercel/node": "^2.5.21",
     "axios-mock-adapter": "^1.21.2",
     "eslint": "^8.24.0",
