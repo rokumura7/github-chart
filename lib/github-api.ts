@@ -6,9 +6,6 @@ export const client = axios.create({ baseURL: 'https://api.github.com', timeout:
 
 export const fetchActivities = async (username: string, year: number) => {
   const token = conf.token ?? '';
-  console.log('----------');
-  console.log(token);
-  console.log('----------');
   const headers = {
     Authorization: `bearer ${token}`,
   };
