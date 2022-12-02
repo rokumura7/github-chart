@@ -14,7 +14,9 @@ module.exports = {
     'import',
   ],
   extends: [
+    'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:import/typescript',
     'prettier'
@@ -35,5 +37,10 @@ module.exports = {
         'arrowParens': 'always'
       }
     ],
+    'complexity': ['warn', 5],
+    'max-depth': ['warn', 3],
+    'max-statements': ['warn', 40],
+    'max-lines': ['warn', 500],
+    'max-lines-per-function': ['warn', { 'max': 25, 'skipBlankLines': true }],
   }
 }
