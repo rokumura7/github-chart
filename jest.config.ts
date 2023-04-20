@@ -10,7 +10,7 @@ export default {
   coveragePathIgnorePatterns: [
     "/node_modules/",
     "/api/index.ts",
-    "/lib/experts/Expert.ts"
+    "/lib/experts/expert.ts"
   ],
   coverageProvider: "v8",
   moduleFileExtensions: [
