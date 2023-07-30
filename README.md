@@ -2,8 +2,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/264a8304f34582046f72/maintainability)](https://codeclimate.com/github/rokumura7/github-chart/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/264a8304f34582046f72/test_coverage)](https://codeclimate.com/github/rokumura7/github-chart/test_coverage)
 
-![dependencies](https://david-dm.org/rokumura7/github-chart.svg)
-![devDependencies](https://david-dm.org/rokumura7/github-chart/dev-status.svg)
+<!-- ![dependencies](https://david-dm.org/rokumura7/github-chart.svg) -->
+<!-- ![devDependencies](https://david-dm.org/rokumura7/github-chart/dev-status.svg) -->
 ![GitHub last commit](https://img.shields.io/github/last-commit/rokumura7/github-chart)
 
 ![GitHub](https://img.shields.io/github/license/rokumura7/github-chart)
@@ -18,8 +18,10 @@
 github-chart will chart your monthly commit count :octocat:
 
 ```markdown
-[![github-chart](https://github-chart.vercel.app/api?user=rokumura7)](https://github.com/rokumura7/github-chart)
+[![github-chart](https://github-chart.vercel.app/api?user={your username})](https://github.com/{your username}/github-chart)
 ```
+
+↑ Just copy it and paste on your README.md ↑
 
 ## for Developers 👾
 
